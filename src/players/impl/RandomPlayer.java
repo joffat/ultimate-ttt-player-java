@@ -2,6 +2,7 @@ package players.impl;
 
 import model.Coords;
 import model.Move;
+import model.Result;
 import model.board.Cell;
 import model.board.UTTTSubBoard;
 import players.AbstractPlayer;
@@ -55,12 +56,15 @@ public class RandomPlayer extends AbstractPlayer {
     }
 
     @Override
-    public void gameOver(boolean youWin) {
-        this.debug("GAME OVER: " + (youWin ? "WINNER" : "LOSER"));
+    public void gameOver(Result result, Move lastMove) {
+//        if (lastMove != null)
+//            this.getCurrentBoard().addOpponentMove(lastMove);
+//        this.debug("GAME OVER: " + result);
     }
 
     @Override
-    public void matchOver(boolean youWin) {
-        this.debug("MATCH OVER: " + (youWin ? "WINNER" : "LOSER"));
+    public void matchOver(Result result) {
+//        this.debug("MATCH OVER: " + result);
     }
+
 }

@@ -5,7 +5,6 @@ import model.Move;
 import model.PlayerEnum;
 import model.Result;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -79,11 +78,11 @@ public class UTTTBoard implements Cloneable {
             rdiag[i] = this.getBoard(i, this.size - 1 - i).getResult();
         }
 
-        if (Arrays.stream(col).distinct().count() == 1 && col[0] != Result.DRAW && col[0] != Result.UNFINISHED) return col[0];
-        if (Arrays.stream(row).distinct().count() == 1 && row[0] != Result.DRAW && row[0] != Result.UNFINISHED) return row[0];
-        if (Arrays.stream(diag).distinct().count() == 1 && diag[0] != Result.DRAW && diag[0] != Result.UNFINISHED) return diag[0];
-        if (Arrays.stream(rdiag).distinct().count() == 1 && rdiag[0] != Result.DRAW && rdiag[0] != Result.UNFINISHED) return rdiag[0];
-        if (this.movesTaken == this.maxMoves) return Result.DRAW;
+        if (Arrays.stream(col).distinct().count() == 1 && col[0] != Result.TIE && col[0] != Result.UNFINISHED) return col[0];
+        if (Arrays.stream(row).distinct().count() == 1 && row[0] != Result.TIE && row[0] != Result.UNFINISHED) return row[0];
+        if (Arrays.stream(diag).distinct().count() == 1 && diag[0] != Result.TIE && diag[0] != Result.UNFINISHED) return diag[0];
+        if (Arrays.stream(rdiag).distinct().count() == 1 && rdiag[0] != Result.TIE && rdiag[0] != Result.UNFINISHED) return rdiag[0];
+        if (this.movesTaken == this.maxMoves) return Result.TIE;
         return Result.UNFINISHED;
     }
 

@@ -1,6 +1,7 @@
 package players;
 
 import model.Move;
+import model.Result;
 
 /**
  * The interface Player.
@@ -80,17 +81,18 @@ public interface Player {
      * The Game Is Over. You Might Still With The Match.
      * Another Game Will Start Soon.
      *
-     * @param youWin True - You Win (Otherwise Better Luck Next Time)
+     * @param result (WIN, LOSE, TIE)
+     * @param previousMove - Null unless you were not last move
      */
-    public void gameOver(boolean youWin);
+    public void gameOver(Result result, Move previousMove);
 
     /**
      * Match Over.
      * The Match Is Over.
      * You May Get To Play Again. But For Now, You Have No Opponent.
      *
-     * @param youWin True - You Win (Otherwise Better Luck Next Time)
+     * @param result (WIN, LOSE, TIE)
      */
-    public void matchOver(boolean youWin);
+    public void matchOver(Result result);
 
 }

@@ -78,7 +78,7 @@ public class UTTTSubBoard implements Cloneable {
         if (Arrays.stream(row).distinct().count() == 1 && row[0] != null) return row[0] == PlayerEnum.ME ? Result.WIN : Result.LOSE;
         if (Arrays.stream(diag).distinct().count() == 1 && diag[0] != null) return diag[0] == PlayerEnum.ME ? Result.WIN : Result.LOSE;
         if (Arrays.stream(rdiag).distinct().count() == 1 && rdiag[0] != null) return rdiag[0] == PlayerEnum.ME ? Result.WIN : Result.LOSE;
-        if (this.movesTaken == this.maxMoves) return Result.DRAW;
+        if (this.movesTaken == this.maxMoves) return Result.TIE;
         return Result.UNFINISHED;
     }
 

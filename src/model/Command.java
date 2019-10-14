@@ -4,6 +4,8 @@ public enum Command {
 
     INIT("init"),
     MOVE("move"),
+    GAME("game"),
+    MATCH("match"),
     OPPONENT("opponent");
 
     private String commandMessage;

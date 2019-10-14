@@ -2,9 +2,8 @@ package players;
 
 import model.Command;
 import model.Move;
+import model.Result;
 import model.board.UTTTBoard;
-
-import java.util.Arrays;
 
 public abstract class AbstractPlayer implements Player {
 
@@ -15,7 +14,7 @@ public abstract class AbstractPlayer implements Player {
     }
 
     @Override
-    public void processInput(String input) {
+    public final void processInput(String input) {
         if (input == null) return;
         debug(input);
         String[] parts = input.split(" ");
@@ -30,6 +29,12 @@ public abstract class AbstractPlayer implements Player {
                     break;
                 case OPPONENT:
                     this.writeMove(this.opponentMove(new Move(parts[1])));
+                    break;
+                case GAME:
+                    this.gameOver(Result.getFromStringMessage(parts[1]), parts.length < 3 ? null : new Move(parts[2]));
+                    break;
+                case MATCH:
+                    this.matchOver(Result.getFromStringMessage(parts[1]));
                     break;
             }
         } catch (EnumConstantNotPresentException e) {
@@ -50,7 +55,11 @@ public abstract class AbstractPlayer implements Player {
 
     @Override
     public void debug(String message) {
-        System.err.println(message);
+        if (message != null)
+            if (message.startsWith("send:"))
+                System.out.println("DEBUG:" + message.replaceFirst("send:", ""));
+            else
+                System.out.println("DEBUG:" + message);
     }
 
     protected UTTTBoard getCurrentBoard() {
@@ -74,9 +83,9 @@ public abstract class AbstractPlayer implements Player {
     public abstract Move opponentMove(Move opponentsMove);
 
     @Override
-    public abstract void gameOver(boolean youWin);
+    public abstract void gameOver(Result result, Move lastMove);
 
     @Override
-    public abstract void matchOver(boolean youWin);
+    public abstract void matchOver(Result result);
 
 }
