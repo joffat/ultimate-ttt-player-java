@@ -2,7 +2,7 @@
 # Compiled class file
 /dist
 /out
-/idea
+/.idea
 *.class
 
 # Log file
