@@ -95,4 +95,10 @@ public interface Player {
      */
     public void matchOver(Result result);
 
+    /*
+    * Game Over.
+    * Your Player Has Timed Out.
+    * */
+    public void timeout();
+
 }

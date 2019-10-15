@@ -6,6 +6,7 @@ public enum Command {
     MOVE("move"),
     GAME("game"),
     MATCH("match"),
+    TIMEOUT("timeout"),
     OPPONENT("opponent");
 
     private String commandMessage;

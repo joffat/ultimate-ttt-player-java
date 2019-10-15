@@ -67,4 +67,8 @@ public class RandomPlayer extends AbstractPlayer {
 //        this.debug("MATCH OVER: " + result);
     }
 
+    @Override
+    public void timeout() {
+
+    }
 }

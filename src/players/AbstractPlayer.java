@@ -36,6 +36,9 @@ public abstract class AbstractPlayer implements Player {
                 case MATCH:
                     this.matchOver(Result.getFromStringMessage(parts[1]));
                     break;
+                case TIMEOUT:
+                    this.timeout();
+                    break;
             }
         } catch (EnumConstantNotPresentException e) {
             System.err.println("Message \"" + input + "\" Could Not Be Processed - No Matching Command" );
@@ -87,5 +90,8 @@ public abstract class AbstractPlayer implements Player {
 
     @Override
     public abstract void matchOver(Result result);
+
+    @Override
+    public abstract void timeout();
 
 }
