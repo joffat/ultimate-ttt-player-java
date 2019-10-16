@@ -42,6 +42,12 @@ public interface Player {
      * @param message the message
      */
     public void debug(String message);
+    
+    /**
+     * New Game.
+     * Prepare The Board.
+     */
+    public void init();
 
     /**
      * Get Move.
