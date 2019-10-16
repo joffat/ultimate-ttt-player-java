@@ -22,7 +22,7 @@ public abstract class AbstractPlayer implements Player {
             Command command = Command.getFromCommandMessage(parts[0]);
             switch (command) {
                 case INIT:
-                    this.gameStart();
+                    this.init();
                     break;
                 case MOVE:
                     this.writeMove(this.getMove());
