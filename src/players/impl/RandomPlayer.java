@@ -17,14 +17,9 @@ public class RandomPlayer extends AbstractPlayer {
     public RandomPlayer() {
         super();
     }
-
+    
     @Override
-    public void matchStart() {
-        this.newBoard();
-    }
-
-    @Override
-    public void gameStart() {
+    public void init() {
         this.newBoard();
     }
 
@@ -65,6 +60,11 @@ public class RandomPlayer extends AbstractPlayer {
     @Override
     public void matchOver(Result result) {
 //        this.debug("MATCH OVER: " + result);
+    }
+    
+    @Override
+    public void timeout() {
+//        this.debug("TIMED OUT");
     }
 
     @Override

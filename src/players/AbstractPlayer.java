@@ -22,7 +22,7 @@ public abstract class AbstractPlayer implements Player {
             Command command = Command.getFromCommandMessage(parts[0]);
             switch (command) {
                 case INIT:
-                    this.gameStart();
+                    this.init();
                     break;
                 case MOVE:
                     this.writeMove(this.getMove());
@@ -72,13 +72,10 @@ public abstract class AbstractPlayer implements Player {
     protected void newBoard() {
         this.currentBoard = new UTTTBoard(3);
     }
-
+    
     @Override
-    public abstract void matchStart();
-
-    @Override
-    public abstract void gameStart();
-
+    public abstract void init();
+    
     @Override
     public abstract Move getMove();
 
@@ -90,6 +87,9 @@ public abstract class AbstractPlayer implements Player {
 
     @Override
     public abstract void matchOver(Result result);
+    
+    @Override
+    public abstract void timeout();
 
     @Override
     public abstract void timeout();

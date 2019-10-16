@@ -42,20 +42,12 @@ public interface Player {
      * @param message the message
      */
     public void debug(String message);
-
+    
     /**
-     * Match Starting.
-     * You Have Been Assigned A New Opponent.
+     * New Game.
+     * Prepare The Board.
      */
-    public void matchStart();
-
-    /**
-     * Game Start.
-     * Game Is Starting.
-     * Prepare For More Messages From UABC.
-     */
-    public void gameStart();
-
+    public void init();
 
     /**
      * Get Move.
@@ -94,6 +86,12 @@ public interface Player {
      * @param result (WIN, LOSE, TIE)
      */
     public void matchOver(Result result);
+    
+    /**
+     * Timed Out.
+     * The Match Is Over.
+     */
+    public void timeout();
 
     /*
     * Game Over.
