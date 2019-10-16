@@ -5,9 +5,7 @@ Welcome!
 
 Welcome! You're probably here because you're in a hackathon we're running. 
 
-If so, make sure you've read our `Documentation`_.
-
-Once you're ready to write your player, you can find functions that will help you write your player in `API Reference`_
+If so, make sure you've read our [docs](https://github.com/joffat/docs) .
 
 # Compile
 From the src folder run `javac -cp . ./Run_Player.java -d ../dist`
