@@ -94,5 +94,11 @@ public interface Player {
      * @param result (WIN, LOSE, TIE)
      */
     public void matchOver(Result result);
+    
+    /**
+     * Timed Out.
+     * The Match Is Over.
+     */
+    public void timeout();
 
 }
