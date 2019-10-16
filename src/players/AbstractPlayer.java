@@ -71,6 +71,9 @@ public abstract class AbstractPlayer implements Player {
     }
     
     @Override
+    public abstract void init();
+    
+    @Override
     public abstract Move getMove();
 
     @Override
