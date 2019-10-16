@@ -66,5 +66,10 @@ public class RandomPlayer extends AbstractPlayer {
     public void matchOver(Result result) {
 //        this.debug("MATCH OVER: " + result);
     }
+    
+    @Override
+    public void timeout() {
+//        this.debug("TIMED OUT");
+    }
 
 }
