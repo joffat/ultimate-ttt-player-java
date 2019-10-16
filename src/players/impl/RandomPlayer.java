@@ -17,6 +17,11 @@ public class RandomPlayer extends AbstractPlayer {
     public RandomPlayer() {
         super();
     }
+    
+    @Override
+    public void init() {
+        this.newBoard();
+    }
 
     @Override
     public Move getMove() {
