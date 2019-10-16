@@ -67,8 +67,4 @@ public class RandomPlayer extends AbstractPlayer {
 //        this.debug("TIMED OUT");
     }
 
-    @Override
-    public void timeout() {
-
-    }
 }

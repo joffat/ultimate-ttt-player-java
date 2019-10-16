@@ -93,10 +93,4 @@ public interface Player {
      */
     public void timeout();
 
-    /*
-    * Game Over.
-    * Your Player Has Timed Out.
-    * */
-    public void timeout();
-
 }

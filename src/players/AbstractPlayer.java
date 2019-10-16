@@ -91,7 +91,4 @@ public abstract class AbstractPlayer implements Player {
     @Override
     public abstract void timeout();
 
-    @Override
-    public abstract void timeout();
-
 }
