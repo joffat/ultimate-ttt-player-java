@@ -44,20 +44,6 @@ public interface Player {
     public void debug(String message);
 
     /**
-     * Match Starting.
-     * You Have Been Assigned A New Opponent.
-     */
-    public void matchStart();
-
-    /**
-     * Game Start.
-     * Game Is Starting.
-     * Prepare For More Messages From UABC.
-     */
-    public void gameStart();
-
-
-    /**
      * Get Move.
      * You Are Starting First.
      * Pick A Board And A Move.
