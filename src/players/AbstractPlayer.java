@@ -69,13 +69,7 @@ public abstract class AbstractPlayer implements Player {
     protected void newBoard() {
         this.currentBoard = new UTTTBoard(3);
     }
-
-    @Override
-    public abstract void matchStart();
-
-    @Override
-    public abstract void gameStart();
-
+    
     @Override
     public abstract Move getMove();
 
