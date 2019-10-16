@@ -87,5 +87,8 @@ public abstract class AbstractPlayer implements Player {
 
     @Override
     public abstract void matchOver(Result result);
+    
+    @Override
+    public abstract void timeout();
 
 }
