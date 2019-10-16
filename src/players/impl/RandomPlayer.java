@@ -19,16 +19,6 @@ public class RandomPlayer extends AbstractPlayer {
     }
 
     @Override
-    public void matchStart() {
-        this.newBoard();
-    }
-
-    @Override
-    public void gameStart() {
-        this.newBoard();
-    }
-
-    @Override
     public Move getMove() {
         List<UTTTSubBoard> unfinishedBoards = this.getCurrentBoard().getUnfinishedBoards();
         UTTTSubBoard board = unfinishedBoards.get(randomNum.nextInt(unfinishedBoards.size()));
